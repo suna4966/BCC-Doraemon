@@ -95,7 +95,8 @@ public class DodgingGame extends JPanel implements ActionListener {
 	                Point drop = drops.get(i);
 	            drop.y += dropSpeed;
 
-	            if (drop.y + 20 >= playerY && drop.y <= playerY && drop.x < playerX && drop.x + 20 > playerX) {
+	            if (drop.y + 20 >= playerY && drop.y <= playerY + 80 && 
+	            	drop.x + 20 >= playerX && drop.x <= playerX + 80) {
 	                System.out.println("Collision detected!");
 	                System.out.println("Drop: (" + drop.x + ", " + drop.y + ") Player: (" + playerX + ", " + playerY + ")");
 	                gameOver = true;
